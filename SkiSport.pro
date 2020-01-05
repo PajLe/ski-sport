@@ -18,11 +18,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    skisanta.cpp
+    skisanta.cpp \
+    skitree.cpp
 
 HEADERS += \
     mainwindow.h \
-    skisanta.h
+    skisanta.h \
+    skitree.h
 
 FORMS += \
     mainwindow.ui
