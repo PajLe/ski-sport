@@ -1,6 +1,7 @@
 #ifndef SKITREE_H
 #define SKITREE_H
 
+#include <QImage>
 #include <QObject>
 
 class SkiTree : public QObject
@@ -14,7 +15,7 @@ private:
     int y;
     int w;
     int h;
-    QImage* treeImage;
+    QImage treeImage;
 
 signals:
 

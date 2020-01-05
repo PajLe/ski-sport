@@ -1,6 +1,7 @@
 #ifndef SKISANTA_H
 #define SKISANTA_H
 
+#include <QImage>
 #include <QObject>
 
 class SkiSanta : public QObject
@@ -14,7 +15,7 @@ private:
     int y;
     int w;
     int h;
-    QImage* santaImage;
+    QImage santaImage;
     enum Stanje{
         Pravo,
         Levo,
