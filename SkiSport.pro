@@ -20,13 +20,15 @@ SOURCES += \
     mainwindow.cpp \
     skigame.cpp \
     skisanta.cpp \
-    skitree.cpp
+    skitree.cpp \
+    skiview.cpp
 
 HEADERS += \
     mainwindow.h \
     skigame.h \
     skisanta.h \
-    skitree.h
+    skitree.h \
+    skiview.h
 
 FORMS += \
     mainwindow.ui
