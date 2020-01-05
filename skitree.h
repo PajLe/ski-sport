@@ -10,10 +10,10 @@ public:
     explicit SkiTree(QObject *parent = nullptr);
 
 private:
-    float x;
-    float y;
-    float w;
-    float h;
+    int x;
+    int y;
+    int w;
+    int h;
     QImage* treeImage;
 
 signals:

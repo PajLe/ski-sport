@@ -10,10 +10,10 @@ public:
     explicit SkiSanta(QObject *parent = nullptr);
 
 private:
-    float x;
-    float y;
-    float w;
-    float h;
+    int x;
+    int y;
+    int w;
+    int h;
     QImage* santaImage;
     enum Stanje{
         Pravo,
