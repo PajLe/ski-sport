@@ -20,10 +20,12 @@ void SkiView::paintEvent(QPaintEvent *event)
 void SkiView::keyPressEvent(QKeyEvent *event)
 {
     switch(event->key()) {
+        case Qt::Key_Right:
         case Qt::Key_D:
             game->moveSanta(20);
             repaint();
             break;
+        case Qt::Key_Left:
         case Qt::Key_A:
             game->moveSanta(-20);
             repaint();

@@ -2,7 +2,11 @@
 
 SkiSanta::SkiSanta(QObject *parent) : QObject(parent)
 {
-    santaImage = QImage(":/IMAGES/santa1.png");
+    santaImageSrc = "santa";
+    stanje = Stanje::Pravo;
+    idSlike = 1;
+    santaImage = QImage(":/IMAGES/" + santaImageSrc + QString::number(idSlike) + ".png");
+
     w = santaImage.width();
     h = santaImage.height();
 }
@@ -22,9 +26,10 @@ QImage SkiSanta::getSantaImage() const
     return santaImage;
 }
 
-void SkiSanta::setSantaImage(const QImage &value)
+void SkiSanta::setSantaImage(QString imageSrc)
 {
-    santaImage = value;
+    santaImageSrc = imageSrc;
+    santaImage = QImage(":/IMAGES/" + santaImageSrc + QString::number(idSlike) + ".png");
 }
 
 int SkiSanta::getW() const
@@ -35,6 +40,17 @@ int SkiSanta::getW() const
 int SkiSanta::getH() const
 {
     return h;
+}
+
+Stanje SkiSanta::getStanje() const
+{
+    return stanje;
+}
+
+void SkiSanta::setStanje(const Stanje& value)
+{
+    stanje = value;
+    (idSlike == 1)? idSlike = 2 : idSlike = 1;
 }
 
 void SkiSanta::setX(int value)

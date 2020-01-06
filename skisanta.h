@@ -4,6 +4,12 @@
 #include <QImage>
 #include <QObject>
 
+enum Stanje{
+    Pravo,
+    Levo,
+    Desno
+};
+
 class SkiSanta : public QObject
 {
     Q_OBJECT
@@ -16,11 +22,14 @@ public:
     int getY() const;
 
     QImage getSantaImage() const;
-    void setSantaImage(const QImage &value);
+    void setSantaImage(QString imageSrc);
 
     int getW() const;
 
     int getH() const;
+
+    Stanje getStanje() const;
+    void setStanje(const Stanje& value);
 
 private:
     int x;
@@ -28,11 +37,9 @@ private:
     int w;
     int h;
     QImage santaImage;
-    enum Stanje{
-        Pravo,
-        Levo,
-        Desno
-    } stanje = Pravo;
+    QString santaImageSrc;
+    Stanje stanje;
+    ushort idSlike;
 
 signals:
 
