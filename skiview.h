@@ -15,8 +15,8 @@ public:
     explicit SkiView(QWidget *parent = nullptr);
 
 protected:
-    void paintEvent(QPaintEvent *event);
-    void keyPressEvent(QKeyEvent *event);
+    void paintEvent(QPaintEvent *event) override;
+    void keyPressEvent(QKeyEvent *event) override;
 
 private:
     SkiGame* game;

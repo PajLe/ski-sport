@@ -1,6 +1,8 @@
 #ifndef SKIGAME_H
 #define SKIGAME_H
 
+#define TREE_COUNT 10
+
 #include <QObject>
 #include <QPainter>
 
@@ -17,7 +19,7 @@ public:
     void moveSanta(int dx);
     void draw(QPainter* p);
 private:
-    SkiTree skiTrees[5];
+    SkiTree skiTrees[TREE_COUNT];
     SkiSanta santa;
     int clientWidth;
     int clientHeight;

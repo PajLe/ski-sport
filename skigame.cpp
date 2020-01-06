@@ -13,7 +13,7 @@ SkiGame::SkiGame(QObject *parent) : QObject(parent)
 
 void SkiGame::tick()
 {
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < TREE_COUNT; i++) {
         int move = skiTrees[i].getY() - 20;
         if (move > -skiTrees[i].getH())
             skiTrees[i].setY(move);
@@ -50,13 +50,13 @@ void SkiGame::draw(QPainter *p)
 {
     p->drawImage(santa.getX(), santa.getY(), santa.getSantaImage());
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < TREE_COUNT; i++)
         p->drawImage(skiTrees[i].getX(), skiTrees[i].getY(), skiTrees[i].getTreeImage());
 }
 
 void SkiGame::init()
 {
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < TREE_COUNT; i++) {
         skiTrees[i].setX(qrand() % (clientWidth - skiTrees[i].getW()));
         skiTrees[i].setY((qrand() % clientHeight) + clientHeight);
     }

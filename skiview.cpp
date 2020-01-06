@@ -8,7 +8,7 @@ SkiView::SkiView(QWidget *parent) : QWidget(parent)
 
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(tick()));
-    timer->start(500);
+    timer->start(250);
 }
 
 void SkiView::paintEvent(QPaintEvent *event)
