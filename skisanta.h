@@ -10,9 +10,21 @@ class SkiSanta : public QObject
 public:
     explicit SkiSanta(QObject *parent = nullptr);
 
+    int getX() const;
+    void setX(int value);
+
+    int getY() const;
+
+    QImage getSantaImage() const;
+    void setSantaImage(const QImage &value);
+
+    int getW() const;
+
+    int getH() const;
+
 private:
     int x;
-    int y;
+    int y = 200;
     int w;
     int h;
     QImage santaImage;
@@ -20,7 +32,7 @@ private:
         Pravo,
         Levo,
         Desno
-    } Stanje;
+    } stanje = Pravo;
 
 signals:
 

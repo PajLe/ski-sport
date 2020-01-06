@@ -3,6 +3,7 @@
 
 #include <QTimer>
 #include <QWidget>
+#include <QKeyEvent>
 
 #include "skigame.h"
 
@@ -18,8 +19,10 @@ protected:
     void keyPressEvent(QKeyEvent *event);
 
 private:
-    SkiGame game;
-    QTimer* timer = new QTimer(this);
+    SkiGame* game;
+    QTimer* timer;
+
+public slots:
     void tick();
 
 signals:
